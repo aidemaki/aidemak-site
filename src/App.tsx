@@ -382,8 +382,8 @@ export default function App() {
             {[
               {
                 step: "01",
-                title: "Share your channel",
-                desc: "Give us access to your YouTube channel. We analyze your content, audience, and growth potential across languages.",
+                title: "Connect your channel",
+                desc: "Link your YouTube channel with us. We analyze your content, audience, and growth potential across languages.",
               },
               {
                 step: "02",
