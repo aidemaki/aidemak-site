@@ -244,7 +244,7 @@ function LangSwitcher({
     <div ref={ref} className="relative">
       <button
         onClick={() => setOpen(!open)}
-        className="flex items-center gap-1.5 text-sm text-zinc-500 hover:text-zinc-900 transition-colors"
+        className="flex items-center gap-1.5 text-base text-zinc-500 hover:text-zinc-900 transition-colors"
       >
         <Globe className="w-4 h-4" />
         {langLabels[lang]}
@@ -258,7 +258,7 @@ function LangSwitcher({
                 setLang(l);
                 setOpen(false);
               }}
-              className={`w-full text-left px-3 py-1.5 text-sm transition-colors ${
+              className={`w-full text-left px-3 py-1.5 text-base transition-colors ${
                 l === lang
                   ? "bg-zinc-50 text-zinc-900 font-medium"
                   : "text-zinc-500 hover:bg-zinc-50 hover:text-zinc-900"
@@ -347,7 +347,7 @@ function ServicesSection({ lang }: { lang: Lang }) {
       <div className="sticky top-0 h-screen flex items-center overflow-hidden">
         <div className="w-full max-w-6xl mx-auto px-6">
           <p
-            className="text-sm font-medium uppercase tracking-wider mb-6 transition-all duration-500"
+            className="text-base font-medium uppercase tracking-wider mb-6 transition-all duration-500"
             style={{
               color: progress > 0.02 ? "#a1a1aa" : "transparent",
               transform: `translateY(${progress > 0.02 ? 0 : 20}px)`,
@@ -375,12 +375,12 @@ function ServicesSection({ lang }: { lang: Lang }) {
                     }}
                   >
                     <h2
-                      className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.05] mb-6"
+                      className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.05] mb-6"
                       style={{ whiteSpace: "pre-line" }}
                     >
                       {service.title}
                     </h2>
-                    <p className="text-lg sm:text-xl text-zinc-500 leading-relaxed max-w-md">
+                    <p className="text-xl sm:text-2xl text-zinc-500 leading-relaxed max-w-md">
                       {service.description}
                     </p>
                   </div>
@@ -403,7 +403,7 @@ function ServicesSection({ lang }: { lang: Lang }) {
                   >
                     <div className="text-right">
                       <p
-                        className="text-sm font-semibold transition-colors duration-500"
+                        className="text-base font-semibold transition-colors duration-500"
                         style={{ color: isActive ? "#18181b" : "#d4d4d8" }}
                       >
                         {service.title.replace("\n", " ")}
@@ -527,7 +527,7 @@ export default function App() {
         <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Logo className="w-8 h-5 text-zinc-900" />
-            <span className="text-lg font-semibold tracking-tight">
+            <span className="text-xl font-semibold tracking-tight">
               Aidemak
             </span>
           </div>
@@ -540,20 +540,20 @@ export default function App() {
         <div className="max-w-5xl mx-auto px-6 pt-24 pb-20">
           <div className="max-w-2xl">
             <Reveal>
-              <div className="inline-flex items-center gap-2 px-3 py-1 mb-6 text-xs font-medium text-zinc-500 bg-zinc-50 border border-zinc-200 rounded-full">
+              <div className="inline-flex items-center gap-2 px-3 py-1 mb-6 text-sm font-medium text-zinc-500 bg-zinc-50 border border-zinc-200 rounded-full">
                 <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full" />
                 {s.badge}
               </div>
             </Reveal>
             <Reveal delay={100}>
-              <h1 className="text-4xl sm:text-5xl font-bold tracking-tight leading-[1.1] mb-5">
+              <h1 className="text-5xl sm:text-6xl font-bold tracking-tight leading-[1.1] mb-5">
                 {s.heroTitle1}
                 <br />
                 {s.heroTitle2}
               </h1>
             </Reveal>
             <Reveal delay={200}>
-              <p className="text-lg text-zinc-500 leading-relaxed mb-8 max-w-lg">
+              <p className="text-xl text-zinc-500 leading-relaxed mb-8 max-w-lg">
                 {s.heroDesc}
               </p>
             </Reveal>
@@ -594,10 +594,10 @@ export default function App() {
         <div className="max-w-5xl mx-auto px-6 py-24">
           <Reveal>
             <div className="mb-14">
-              <p className="text-sm font-medium text-zinc-400 uppercase tracking-wider mb-2">
+              <p className="text-base font-medium text-zinc-400 uppercase tracking-wider mb-2">
                 {s.processLabel}
               </p>
-              <h2 className="text-3xl font-bold tracking-tight">
+              <h2 className="text-4xl font-bold tracking-tight">
                 {s.processTitle}
               </h2>
             </div>
@@ -622,11 +622,11 @@ export default function App() {
             ].map((item, i) => (
               <Reveal key={item.step} delay={i * 150}>
                 <div>
-                  <span className="text-xs font-mono text-zinc-300 font-bold">
+                  <span className="text-sm font-mono text-zinc-300 font-bold">
                     {item.step}
                   </span>
-                  <h3 className="font-semibold mt-2 mb-2">{item.title}</h3>
-                  <p className="text-sm text-zinc-500 leading-relaxed">
+                  <h3 className="text-lg font-semibold mt-2 mb-2">{item.title}</h3>
+                  <p className="text-base text-zinc-500 leading-relaxed">
                     {item.desc}
                   </p>
                 </div>
@@ -641,10 +641,10 @@ export default function App() {
         <div className="max-w-5xl mx-auto px-6 py-24">
           <div className="text-center max-w-xl mx-auto">
             <Reveal>
-              <p className="text-sm font-medium text-zinc-400 uppercase tracking-wider mb-2">
+              <p className="text-base font-medium text-zinc-400 uppercase tracking-wider mb-2">
                 {s.applyLabel}
               </p>
-              <h2 className="text-3xl font-bold tracking-tight mb-6">
+              <h2 className="text-4xl font-bold tracking-tight mb-6">
                 {s.applyTitle}
               </h2>
             </Reveal>
@@ -668,7 +668,7 @@ export default function App() {
                 }}
               >
                 <div>
-                  <label className="block text-sm font-medium text-zinc-700 mb-1.5">
+                  <label className="block text-base font-medium text-zinc-700 mb-1.5">
                     {s.formYtLabel}
                   </label>
                   <Input
@@ -680,7 +680,7 @@ export default function App() {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-zinc-700 mb-1.5">
+                  <label className="block text-base font-medium text-zinc-700 mb-1.5">
                     {s.formContactLabel}
                   </label>
                   <div className="grid grid-cols-3 gap-2 mb-3">
@@ -688,7 +688,7 @@ export default function App() {
                       <button
                         key={method}
                         onClick={() => setContactMethod(method)}
-                        className={`px-3 py-2 text-sm border rounded-md transition-colors ${
+                        className={`px-3 py-2 text-base border rounded-md transition-colors ${
                           contactMethod === method
                             ? "bg-zinc-900 text-white border-zinc-900"
                             : "bg-white text-zinc-600 border-zinc-200 hover:border-zinc-300"
@@ -717,7 +717,7 @@ export default function App() {
                   {s.formSubmit}
                   <ArrowRight className="w-4 h-4" />
                 </Button>
-                <p className="text-xs text-zinc-400 text-center">
+                <p className="text-sm text-zinc-400 text-center">
                   {s.formNote}
                 </p>
               </div>
@@ -731,9 +731,9 @@ export default function App() {
         <div className="max-w-5xl mx-auto px-6 py-8 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Logo className="w-6 h-4 text-zinc-400" />
-            <span className="text-sm text-zinc-400">Aidemak</span>
+            <span className="text-base text-zinc-400">Aidemak</span>
           </div>
-          <p className="text-xs text-zinc-300">
+          <p className="text-sm text-zinc-300">
             &copy; {new Date().getFullYear()} Aidemak. {s.footerRights}
           </p>
         </div>
